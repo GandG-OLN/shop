@@ -2,24 +2,23 @@
   <data>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="agent_list">
-      <field name="name">Agent list</field>
-      <field name="model">shop.agent</field>
+    <record model="ir.ui.view" id="marchand_list">
+      <field name="name">Marchand list</field>
+      <field name="model">shop.marchand</field>
       <field name="arch" type="xml">
         <tree>
-            <field name="type"/>
-            <field name="f_name"/>
-            <field name="l_name"/>
-            <field name="sexe"/>
+          <field name="f_name"/>
+          <field name="l_name"/>
+          <field name="sexe"/>
         </tree>
       </field>
     </record>
       
      <!-- explicit Form view definition -->
 
-    <record model="ir.ui.view" id="agent_form">
-      <field name="name">Agent form</field>
-      <field name="model">shop.agent</field>
+    <record model="ir.ui.view" id="marchand_form">
+      <field name="name">Marchand form</field>
+      <field name="model">shop.marchand</field>
       <field name="arch" type="xml">
         <form>
         <!--    <header>
@@ -30,7 +29,6 @@
             
                 <group>
                     <!--<field name="name" readonly="1"/>-->
-                    <field name="type"/>
                     <field name="f_name"/>
                     <field name="l_name"/>
                     <field name="sexe"/>
@@ -41,11 +39,11 @@
 
                     <!--<field name="room_id"/>-->
                 
-                <!-- <notebook>
-                    <page string="Liste des matières">
-                        <field name="matiere_ids"/>
+                <notebook>
+                    <page string="Liste des boutiques">
+                        <field name="boutique_ids"/>
                     </page>
-                </notebook> -->
+                </notebook>
             </sheet>
         </form>
       </field>
@@ -54,9 +52,9 @@
 
     <!-- actions opening views on models -->
 
-    <record model="ir.actions.act_window" id="agent_action_window">
-      <field name="name">Page des Agents</field>
-      <field name="res_model">shop.agent</field>
+    <record model="ir.actions.act_window" id="marchand_action_window">
+      <field name="name">Page des Marchands</field>
+      <field name="res_model">shop.marchand</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -67,13 +65,13 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Agents" id="shop_agent_cat" parent="shop.menu_root"/>
+    <menuitem name="Marchands" id="shop_marchand_cat" parent="shop.menu_root"/>
  <!--   <menuitem name="Menu 2" id="university.menu_2" parent="university.menu_root"/> -->
 
     <!-- actions -->
 
-    <menuitem name="Liste des agents" id="shop_agent_list" parent="shop_agent_cat"
-              action="agent_action_window"/>
+    <menuitem name="Liste des marchands" id="shop_marchand_list" parent="shop_marchand_cat"
+              action="marchand_action_window"/>
  <!--   <menuitem name="Server to list" id="university" parent="university.menu_2"
               action="university.action_server"/> -->
 

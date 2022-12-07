@@ -7,9 +7,10 @@
       <field name="model">shop.agent</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="f_name"/>
-          <field name="l_name"/>
-          <field name="sexe"/>
+            <field name="type"/>
+            <field name="f_name"/>
+            <field name="l_name"/>
+            <field name="sexe"/>
         </tree>
       </field>
     </record>
@@ -29,6 +30,7 @@
             
                 <group>
                     <!--<field name="name" readonly="1"/>-->
+                    <field name="type"/>
                     <field name="f_name"/>
                     <field name="l_name"/>
                     <field name="sexe"/>
@@ -53,7 +55,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="agent_action_window">
-      <field name="name">Agent page</field>
+      <field name="name">Page des Agents</field>
       <field name="res_model">shop.agent</field>
       <field name="view_mode">tree,form</field>
     </record>

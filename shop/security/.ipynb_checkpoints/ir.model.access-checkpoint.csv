@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
-access_shop_agent,access_shop_agent,model_shop_agent,base.group_user,1,1,1,1 
+access_shop_agent,access_shop_agent,model_shop_agent,base.group_user,1,1,1,1
+access_shop_marchand,access_shop_marchand,model_shop_marchand,base.group_user,1,1,1,1
+access_shop_boutique,access_shop_boutique,model_shop_boutique,base.group_user,1,1,1,1

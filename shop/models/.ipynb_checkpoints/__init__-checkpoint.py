@@ -2,3 +2,5 @@
 
 
 from . import agent
+from . import marchand
+from . import boutique

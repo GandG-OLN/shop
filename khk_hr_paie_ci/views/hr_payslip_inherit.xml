@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="hr_payslipform_inherit_" model="ir.ui.view">
+        <field name="name">hr.payslip.form.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="om_hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="brut_of_current_payslip" invisible="True"/>
+            </field>
+        </field>
+    </record>
+</odoo>

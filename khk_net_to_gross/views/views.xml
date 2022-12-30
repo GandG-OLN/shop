@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+      <record id="hr_payslip_form_inherit_" model="ir.ui.view">
+            <field name="name">hr.payslip.inherit_</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="om_hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_payslip_cancel']" position="after">
+                    <button string="Net Simulation" name="%(action_payslip_simulation)d" states="draft" type="action"/>
+                </xpath>
+            </field>
+      </record>
+      
+      
+      
+      <record id="hr_salary_rule_form_inherit_" model="ir.ui.view">
+            <field name="name">hr.salary.rule.form.inherit_</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="om_hr_payroll.hr_salary_rule_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='is_prorata']" position="after">
+                    <field name="simulate_ok"/>
+                </xpath>
+            </field>
+        </record>
+  </data>
+</odoo>
